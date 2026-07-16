@@ -6,7 +6,7 @@ This project explores the entire machine learning pipeline—from rigorous prepr
 
 ---
 
-## 🚀 Key Highlights & Accomplishments
+## Key Highlights & Accomplishments
 * **Preprocessing & Optimization**: Applied advanced data preprocessing techniques including equal-width binning discretization, standard scaling, and feature selection via Mutual Information (MI).
 * **Multi-Model Pipeline**: Trained, optimized, and evaluated five diverse classifiers: **Decision Tree**, **Random Forest**, **K-Nearest Neighbors (KNN)**, **Logistic Regression**, and **Gaussian Naive Bayes**.
 * **Hyperparameter Tuning**: Utilized visual elbow methods and out-of-bag (OOB) error analysis with the `Kneed` library to locate optimal settings for K-Nearest Neighbors ($k$) and Random Forest estimators ($n\_estimators$).
@@ -15,7 +15,7 @@ This project explores the entire machine learning pipeline—from rigorous prepr
 
 ---
 
-## 📊 Dataset & Preprocessing
+## Dataset & Preprocessing
 
 The analysis uses the classic **UCI Wine Quality Dataset** (red wine subset), consisting of **1,599 instances** with 11 physicochemical features (such as pH levels, volatile acidity, alcohol content, sulphates, etc.) and a target quality rating.
 
@@ -29,14 +29,14 @@ Features were scaled using **Standardization (Z-score normalization)** to ensure
 
 ---
 
-## 🔍 Feature Selection via Mutual Information
+## Feature Selection via Mutual Information
 Using **Mutual Information (MI) classification**, we evaluated how much information each physicochemical feature shares with the wine quality target. Features yielding a `0.0` MI score were removed to eliminate noise:
 * **Dropped Features**: `free sulfur dioxide` and `pH`.
 * **Retained Features**: `alcohol` (highest MI score), `volatile acidity`, `sulphates`, `citric acid`, `fixed acidity`, `chlorides`, `total sulfur dioxide`, `density`, and `residual sugar`.
 
 ---
 
-## 🛠️ Models & Hyperparameter Tuning
+## Models & Hyperparameter Tuning
 
 All models were evaluated using **10-fold cross-validation** to guarantee generalization and prevent overfitting.
 
@@ -52,7 +52,7 @@ All models were evaluated using **10-fold cross-validation** to guarantee genera
 
 ---
 
-## 📈 Performance Comparison
+## Performance Comparison
 
 The tables below outline the average cross-validated performance of all five models before and after applying Mutual Information feature selection.
 
@@ -76,7 +76,7 @@ The tables below outline the average cross-validated performance of all five mod
 
 ---
 
-## 🔑 Crucial Trade-offs & Business Applications
+## Crucial Trade-offs & Business Applications
 
 * **Logistic Regression (High Precision/Accuracy)**: Achieved the highest accuracy (73.79%) and precision (78.17%). Because it minimizes false positives, it is highly suited for a **wine vendor select-display**. A retailer choosing wines to showcase on a premium front display needs to ensure every selected wine is truly high-quality to avoid customer dissatisfaction and protect brand reputation.
 * **K-Nearest Neighbors (High Recall/F1)**: Outperformed other models in recall (reaching 77.42% with feature selection) and secured the highest overall F1-score (74.01%). Because it minimizes false negatives, KNN is ideal for building a **high-quality wine directory or database**, where the objective is to capture as many genuine high-quality wines as possible without missing them.
@@ -85,7 +85,7 @@ The tables below outline the average cross-validated performance of all five mod
 
 ---
 
-## ⚙️ Environment Setup & Notebook Execution
+## Environment Setup & Notebook Execution
 
 ### Repository Structure
 * [project.ipynb](file:///c:/Users/aidan/Desktop/DSMLAI%20Projects/Wine%20Quality%20Classification%20Project/project.ipynb): Core Jupyter Notebook with python implementation.
@@ -108,5 +108,5 @@ Run each cell sequentially to reproduce the data preprocessing, model tuning plo
 
 ---
 
-## 📜 Citations
+## Citations
 * Cortez, P., Cerdeira, A., Almeida, F., Matos, T., & Reis, J. (2009). *Wine Quality*. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T.
