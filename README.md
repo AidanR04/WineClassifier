@@ -9,7 +9,7 @@ This project explores the entire machine learning pipeline—from rigorous prepr
 ## Key Highlights & Accomplishments
 * **Preprocessing & Optimization**: Applied advanced data preprocessing techniques including equal-width binning discretization, standard scaling, and feature selection via Mutual Information (MI).
 * **Multi-Model Pipeline**: Trained, optimized, and evaluated five diverse classifiers: **Decision Tree**, **Random Forest**, **K-Nearest Neighbors (KNN)**, **Logistic Regression**, and **Gaussian Naive Bayes**.
-* **Hyperparameter Tuning**: Utilized visual elbow methods and out-of-bag (OOB) error analysis with the `Kneed` library to locate optimal settings for K-Nearest Neighbors ($k$) and Random Forest estimators ($n\_estimators$).
+* **Hyperparameter Tuning**: Utilized visual elbow methods and out-of-bag (OOB) error analysis with the `Kneed` library to locate optimal settings for K-Nearest Neighbors ($k$) and Random Forest estimators ($n-estimators$).
 * **Comparative Evaluation**: Measured and contrasted models across key classification metrics—**Accuracy**, **Precision**, **Recall**, and **F1-score**—to identify trade-offs (e.g., KNN's recall vs. Logistic Regression's precision) and quantify the performance boost from feature selection.
 * **Technical Writing**: Co-authored a complete, formal technical paper ([Wine Quality Classification Paper.docx](file:///c:/Users/aidan/Desktop/DSMLAI%20Projects/Wine%20Quality%20Classification%20Project/Wine%20Quality%20Classification%20Paper.docx)) detailing the research methodology, quantitative results, and theoretical interpretations.
 
@@ -47,8 +47,8 @@ All models were evaluated using **10-fold cross-validation** to guarantee genera
    * *With Feature Selection*: Tuned to **$k = 9$** (successfully located via Kneed library).
 4. **Logistic Regression**: Linear binary classifier utilizing a sigmoid activation function and class-weight balancing.
 5. **Random Forest**: Ensemble bootstrap aggregation (bagging) classifier.
-   * *Without Feature Selection*: Tuned to **$n\_estimators = 10$** trees based on Out-of-Bag (OOB) error elbow curves.
-   * *With Feature Selection*: Tuned to **$n\_estimators = 12$** trees.
+   * *Without Feature Selection*: Tuned to **$n-estimators = 10$** trees based on Out-of-Bag (OOB) error elbow curves.
+   * *With Feature Selection*: Tuned to **$n-estimators = 12$** trees.
 
 ---
 
